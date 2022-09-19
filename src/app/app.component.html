@@ -1,0 +1,28 @@
+
+<div class="tournment" onclick="this.classList.toggle('expand');">
+  <div class="navBar"> TorneiOpus</div>
+  
+  <div class="teamsGrid" >
+    <div  class="Columns"  *ngFor="let col of columns" >
+      
+    <div class="rowsItems" *ngFor ="let obj of col">
+      
+        <div class="item" *ngIf="obj.isButton==1;else empty_cont">
+            <div class="itemb" *ngIf="obj.w !=0" ></div>
+            <div class="itemr" [ngStyle]="{
+              'content':'',
+              'width': obj.w+'%',
+              'height': '2px',
+              'background': '#000',
+              'position': 'absolute',
+              'right': obj.r+'%',
+              'top':'160%'}"></div>
+            <div class="itemt" *ngIf="obj.idxOnKey != qtdElem-1"></div>
+            
+          <button class="bt" (click)="nextKey(obj.idxOnKey)">{{keys[obj.idxOnKey]}}</button>  
+        </div>
+        <ng-template #empty_cont> <div class="emptySpace"></div> </ng-template>
+      </div>
+    </div>
+  </div>
+</div>

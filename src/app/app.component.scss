@@ -1,0 +1,96 @@
+
+$red-opus: #BA1D36;
+$red-opus-light: #D77275;
+$azure-light: #F7FBFF;
+$gray-dark: #50555C;
+
+.navBar{
+    color: $red-opus;
+    font-size:50px;
+    text-align: center;
+    font-weight: bold;
+}
+.tournment{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: 0% 90%;
+    transition: all 2s;
+    transform:initial;
+    bottom: 0px;
+    left: 0px;
+    background-color:$gray-dark ;
+    
+}
+
+.teamsGrid{
+    display: grid;
+    
+    
+    .bt{
+        color: #000;
+        background-color:$azure-light;
+        display:flex;
+        border: 2px solid $red-opus;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        width: 80px;
+    }
+
+}
+.Columns {//Piramide
+    //border: 1px solid black;
+    margin: 1rem;
+    text-align: center;
+  }
+.rowsItems{
+    display: inline-block;
+    vertical-align: middle;
+    padding: 2rem 2rem;
+    
+    /* height: 126px;
+    width: 176px; */
+    
+}
+.item { 
+    display: inline-block;
+    padding: 1rem 1rem;
+    /* 
+    height: 72px;
+    width: 112px; */
+    position: relative;
+    
+  }
+.expand {
+    transform: scale(1.5);
+    
+}
+.itemt::before{
+    content:'';
+    width: 2px;
+    height: 100%;
+    background: #000;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -2px;
+}
+.itemb::before{
+    content:'';
+    width: 2px;
+    background: #000;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -2px;
+    height: 65%;
+}
+.emptySpace{
+    border: #BA1D36;
+    height: 1rem;
+    width: 7rem;
+  }
+
+
